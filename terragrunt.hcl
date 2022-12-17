@@ -14,10 +14,13 @@ locals {
   # Automatically load environment-level variables
   environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
+  version = read_terragrunt_config(find_in_parent_folders("account.hcl"))
+
   # Extract the variables we need for easy access
   account_name = local.account_vars.locals.account_name
   account_id   = local.account_vars.locals.aws_account_id
   aws_region   = local.region_vars.locals.aws_region
+  account_version = local.account_vars.locals.account_name
 }
 
 # Generate an AWS provider block
