@@ -3,5 +3,5 @@
 locals {
   account_name   = "prod"
   aws_account_id = "837787451052" # TODO: replace me with your AWS account ID!
-  aws_profile    = "prod"
+  aws_profile_name    = "prod"
 }

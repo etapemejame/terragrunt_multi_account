@@ -16,7 +16,8 @@ locals {
   env = local.environment_vars.locals.environment
 
   # Expose the base source URL so different versions of the module can be deployed in different environments.
-  base_source_url = "git::git@github.com:etapemejame/Terragrunt_Project.git//asg-elb-service"
+  base_source_url = "git::git@github.com:etapemejame/Terragrunt_Project.git//asg_elb_service"
+  // base_source_url = "git::git@github.com:gruntwork-io/terragrunt-infrastructure-modules-example.git//asg-elb-service"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------

@@ -10,7 +10,7 @@
 # needs to deploy a different module version, it should redefine this block with a different ref to override the
 # deployed version.
 terraform {
-  source = "${local.base_source_url}?ref=v0.1.0"
+  source = "${local.base_source_url}?ref=v0.3.0" 
 }
 
 
@@ -27,7 +27,7 @@ locals {
   # Expose the base source URL so different versions of the module can be deployed in different environments. This will
   # be used to construct the terraform block in the child terragrunt configurations.
   base_source_url = "git::git@github.com:etapemejame/Terragrunt_Project.git//mysql"
-  
+  // base_source_url = "git::git@github.com:gruntwork-io/terragrunt-infrastructure-modules-example.git//mysql"
 }
 
 
@@ -42,6 +42,7 @@ inputs = {
   allocated_storage = 20
   storage_type      = "standard"
   master_username   = "admin"
+  master_password   = "TF_VAR_master_password"
 
   # TODO: To avoid storing your DB password in the code, set it as the environment variable TF_VAR_master_password
 }
