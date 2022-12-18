@@ -30,4 +30,5 @@ include "envcommon" {
 inputs = {
   instance_class    = "db.t2.medium"
   allocated_storage = 100
+  db_name = "prod_db"
 }
