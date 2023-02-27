@@ -37,6 +37,7 @@ terraform {
     env_vars = {
       AWS_PROFILE = "${local.aws_profile}"
     }
+
   }
 }
 

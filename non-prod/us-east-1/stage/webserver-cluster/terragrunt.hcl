@@ -9,7 +9,7 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 terraform {
-  source = "${include.envcommon.locals.base_source_url}?ref=v0.3.0" #?ref=v0.1.0
+  source = "${include.envcommon.locals.base_source_url}?ref=v0.4.0" #?ref=v0.1.0
 }
 
 # Include the root `terragrunt.hcl` configuration. The root configuration contains settings that are common across all
